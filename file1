@@ -1,0 +1,12 @@
+[  
+"if we are getting error while copying (scp) we can use" :-
+
+alias rsync='rsync --rsync-path="sudo rsync" -e "ssh -q -i ${var.private_key_file} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"'
+    rsync ubuntu@${aws_eip.master.public_ip}:/home/ubuntu/admin.conf ${local.kubeconfig_file} >/dev/null
+    
+]
+
+https://itnext.io/bootstrapping-kubernetes-clusters-on-aws-with-terraform-b7c0371aaea0#9403
+
+
+== master node worker node setup ==
